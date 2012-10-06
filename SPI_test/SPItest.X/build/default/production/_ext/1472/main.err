@@ -1,0 +1,13 @@
+MPLAB C18 v3.16 (feature limited)
+Copyright 1999-2005 Microchip Technology Inc.
+This version of MPLAB C18 does not support the extended mode
+and will not perform all optimizations.  To purchase a full
+copy of MPLAB C18, please contact your local distributor or
+visit buy.microchip.com.
+
+C:\MPLAB_Projects\SPI_test\main.c:76:Error [1105] symbol 'i' has not been defined
+C:\MPLAB_Projects\SPI_test\main.c:76:Error [1101] lvalue required
+C:\MPLAB_Projects\SPI_test\main.c:79:Warning [2058] call of function without prototype
+C:\MPLAB_Projects\SPI_test\main.c:84:Warning [2058] call of function without prototype
+C:\MPLAB_Projects\SPI_test\main.c:85:Error [1105] symbol 'i' has not been defined
+C:\MPLAB_Projects\SPI_test\main.c:85:Error [1101] lvalue required

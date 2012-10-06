@@ -1,0 +1,40 @@
+   Address    Value              Category                                   Setting                     
+
+   300000      24   96MHz PLL Prescaler               Divide by 5 (20MHz input)                         
+                    CPU System Clock Postscaler       [OSC1/OSC2 Src: /1][96MHz PLL Src: /2]            
+                    Full-Speed USB Clock Source SelectionClock src from 96MHz PLL/2                        
+   300001      0F   Oscillator                        HS: HS+PLL, USB-HS                                
+                    Fail-Safe Clock Monitor Enable    Disabled                                          
+                    Internal External Switch Over ModeDisabled                                          
+   300002      3E   Power Up Timer                    Enabled                                           
+                    Brown Out Detect                  Enabled in hardware, SBOREN disabled              
+                    Brown Out Voltage                 2.0V                                              
+                    USB Voltage Regulator             Enabled                                           
+   300003      1E   Watchdog Timer                    Disabled-Controlled by SWDTEN bit                 
+                    Watchdog Postscaler               1:32768                                           
+   300005      81   CCP2 Mux                          RC1                                               
+                    PortB A/D Enable                  PORTB<4:0> configured as digital I/O on RESET     
+                    Low Power Timer1 Osc enable       Disabled                                          
+                    Master Clear Enable               MCLR Enabled,RE3 Disabled                         
+   300006      01   Stack Overflow Reset              Enabled                                           
+                    Low Voltage Program               Disabled                                          
+                    Dedicated In-Circuit Port {ICD/ICSP}Disabled                                          
+                    Extended CPU Enable               Disabled                                          
+   300008      0F   Code Protect 00800-01FFF          Disabled                                          
+                    Code Protect 02000-03FFF          Disabled                                          
+                    Code Protect 04000-05FFF          Disabled                                          
+                    Code Protect 06000-07FFF          Disabled                                          
+   300009      C0   Code Protect Boot                 Disabled                                          
+                    Data EE Read Protect              Disabled                                          
+   30000A      0F   Table Write Protect 00800-01FFF   Disabled                                          
+                    Table Write Protect 02000-03FFF   Disabled                                          
+                    Table Write Protect 04000-05FFF   Disabled                                          
+                    Table Write Protect 06000-07FFF   Disabled                                          
+   30000B      E0   Config. Write Protect             Disabled                                          
+                    Table Write Protect Boot          Disabled                                          
+                    Data EE Write Protect             Disabled                                          
+   30000C      0F   Table Read Protect 00800-01FFF    Disabled                                          
+                    Table Read Protect 02000-03FFF    Disabled                                          
+                    Table Read Protect 04000-05FFF    Disabled                                          
+                    Table Read Protect 06000-07FFF    Disabled                                          
+   30000D      40   Table Read Protect Boot           Disabled                                          
