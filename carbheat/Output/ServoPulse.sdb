@@ -1,0 +1,257 @@
+[p GLOBOPT AUTOSTATIC PIC14 PICMIDHI PICLOMID SPACEOPT ]
+"11 C:\Program Files\HI-TECH Software\PICC\LITE\9.60\include\pic12f6x.h
+[v _TMR0 `Vuc  1 s 1 @1 ]
+"12
+[v _PCL `Vuc  1 s 1 @2 ]
+"13
+[v _STATUS `Vuc  1 s 1 @3 ]
+"14
+[v _FSR `Vuc  1 s 1 @4 ]
+"15
+[v _GPIO `Vuc  1 s 1 @5 ]
+"16
+[v _PCLATH `Vuc  1 s 1 @10 ]
+"17
+[v _INTCON `Vuc  1 s 1 @11 ]
+"18
+[v _PIR1 `Vuc  1 s 1 @12 ]
+"19
+[v _TMR1L `Vuc  1 s 1 @14 ]
+"20
+[v _TMR1H `Vuc  1 s 1 @15 ]
+"21
+[v _T1CON `Vuc  1 s 1 @16 ]
+"22
+[v _CMCON `Vuc  1 s 1 @25 ]
+"24
+[v _ADRESH `Vuc  1 s 1 @30 ]
+"25
+[v _ADCON0 `Vuc  1 s 1 @31 ]
+"27
+[v _OPTION `Xuc  1 s 1 @129 ]
+"28
+[v _TRISIO `Xuc  1 s 1 @133 ]
+"29
+[v _PIE1 `Xuc  1 s 1 @140 ]
+"30
+[v _PCON `VXuc  1 s 1 @142 ]
+"31
+[v _OSCCAL `Xuc  1 s 1 @144 ]
+"32
+[v _WPU `Xuc  1 s 1 @149 ]
+"33
+[v _IOCB `Xuc  1 s 1 @150 ]
+"34
+[v _VRCON `VXuc  1 s 1 @153 ]
+"35
+[v _EEDATA `VXuc  1 s 1 @154 ]
+"36
+[v _EEADR `VXuc  1 s 1 @155 ]
+"37
+[v _EECON1 `VXuc  1 s 1 @156 ]
+"38
+[v _EECON2 `VXuc  1 s 1 @157 ]
+"40
+[v _ADRESL `VXuc  1 s 1 @158 ]
+"41
+[v _ANSEL `Xuc  1 s 1 @159 ]
+"45
+[v _CARRY `Vb  1 s 0 @24 ]
+"46
+[v _DC `Vb  1 s 0 @25 ]
+"47
+[v _ZERO `Vb  1 s 0 @26 ]
+"48
+[v _PD `Vb  1 s 0 @27 ]
+"49
+[v _TO `Vb  1 s 0 @28 ]
+"50
+[v _RP0 `b  1 s 0 @29 ]
+"53
+[v _GPIO0 `Vb  1 s 0 @40 ]
+"54
+[v _GPIO1 `Vb  1 s 0 @41 ]
+"55
+[v _GPIO2 `Vb  1 s 0 @42 ]
+"56
+[v _GPIO3 `Vb  1 s 0 @43 ]
+"57
+[v _GPIO4 `Vb  1 s 0 @44 ]
+"58
+[v _GPIO5 `Vb  1 s 0 @45 ]
+"61
+[v _GPIF `Vb  1 s 0 @88 ]
+"62
+[v _INTF `Vb  1 s 0 @89 ]
+"63
+[v _T0IF `Vb  1 s 0 @90 ]
+"64
+[v _GPIE `b  1 s 0 @91 ]
+"65
+[v _INTE `b  1 s 0 @92 ]
+"66
+[v _T0IE `b  1 s 0 @93 ]
+"67
+[v _PEIE `b  1 s 0 @94 ]
+"68
+[v _GIE `b  1 s 0 @95 ]
+"71
+[v _TMR1IF `Vb  1 s 0 @96 ]
+"72
+[v _CMIF `Vb  1 s 0 @99 ]
+"73
+[v _ADIF `Vb  1 s 0 @102 ]
+"74
+[v _EEIF `Vb  1 s 0 @103 ]
+"77
+[v _TMR1ON `b  1 s 0 @128 ]
+"78
+[v _TMR1CS `b  1 s 0 @129 ]
+"79
+[v _T1SYNC `b  1 s 0 @130 ]
+"80
+[v _T1OSCEN `b  1 s 0 @131 ]
+"81
+[v _T1CKPS0 `b  1 s 0 @132 ]
+"82
+[v _T1CKPS1 `b  1 s 0 @133 ]
+"83
+[v _TMR1GE `b  1 s 0 @134 ]
+"86
+[v _CM0 `b  1 s 0 @200 ]
+"87
+[v _CM1 `b  1 s 0 @201 ]
+"88
+[v _CM2 `b  1 s 0 @202 ]
+"89
+[v _CIS `b  1 s 0 @203 ]
+"90
+[v _CINV `b  1 s 0 @204 ]
+"91
+[v _COUT `Vb  1 s 0 @206 ]
+"95
+[v _ADON `Vb  1 s 0 @248 ]
+"96
+[v _GODONE `Vb  1 s 0 @249 ]
+"97
+[v _CHS0 `b  1 s 0 @250 ]
+"98
+[v _CHS1 `b  1 s 0 @251 ]
+"99
+[v _VCFG `b  1 s 0 @254 ]
+"100
+[v _ADFM `b  1 s 0 @255 ]
+"104
+[v _PS0 `Xb  1 s 0 @1032 ]
+"105
+[v _PS1 `Xb  1 s 0 @1033 ]
+"106
+[v _PS2 `Xb  1 s 0 @1034 ]
+"107
+[v _PSA `Xb  1 s 0 @1035 ]
+"108
+[v _T0SE `Xb  1 s 0 @1036 ]
+"109
+[v _T0CS `Xb  1 s 0 @1037 ]
+"110
+[v _INTEDG `Xb  1 s 0 @1038 ]
+"111
+[v _GPPU `Xb  1 s 0 @1039 ]
+"114
+[v _TRIS0 `Xb  1 s 0 @1064 ]
+"115
+[v _TRIS1 `Xb  1 s 0 @1065 ]
+"116
+[v _TRIS2 `Xb  1 s 0 @1066 ]
+"117
+[v _TRIS3 `Xb  1 s 0 @1067 ]
+"118
+[v _TRIS4 `Xb  1 s 0 @1068 ]
+"119
+[v _TRIS5 `Xb  1 s 0 @1069 ]
+"122
+[v _TMR1IE `Xb  1 s 0 @1120 ]
+"123
+[v _CMIE `Xb  1 s 0 @1123 ]
+"124
+[v _ADIE `Xb  1 s 0 @1126 ]
+"125
+[v _EEIE `Xb  1 s 0 @1127 ]
+"128
+[v _BOD `VXb  1 s 0 @1136 ]
+"129
+[v _POR `VXb  1 s 0 @1137 ]
+"132
+[v _CAL0 `Xb  1 s 0 @1154 ]
+"133
+[v _CAL1 `Xb  1 s 0 @1155 ]
+"134
+[v _CAL2 `Xb  1 s 0 @1156 ]
+"135
+[v _CAL3 `Xb  1 s 0 @1157 ]
+"136
+[v _CAL4 `Xb  1 s 0 @1158 ]
+"137
+[v _CAL5 `Xb  1 s 0 @1159 ]
+"140
+[v _WPU0 `Xb  1 s 0 @1192 ]
+"141
+[v _WPU1 `Xb  1 s 0 @1193 ]
+"142
+[v _WPU2 `Xb  1 s 0 @1194 ]
+"143
+[v _WPU4 `Xb  1 s 0 @1196 ]
+"144
+[v _WPU5 `Xb  1 s 0 @1197 ]
+"147
+[v _IOCB0 `Xb  1 s 0 @1200 ]
+"148
+[v _IOCB1 `Xb  1 s 0 @1201 ]
+"149
+[v _IOCB2 `Xb  1 s 0 @1202 ]
+"150
+[v _IOCB3 `Xb  1 s 0 @1203 ]
+"151
+[v _IOCB4 `Xb  1 s 0 @1204 ]
+"152
+[v _IOCB5 `Xb  1 s 0 @1205 ]
+"155
+[v _VR0 `Xb  1 s 0 @1224 ]
+"156
+[v _VR1 `Xb  1 s 0 @1225 ]
+"157
+[v _VR2 `Xb  1 s 0 @1226 ]
+"158
+[v _VR3 `Xb  1 s 0 @1227 ]
+"159
+[v _VRR `Xb  1 s 0 @1229 ]
+"160
+[v _VREN `Xb  1 s 0 @1231 ]
+"163
+[v _RD `VXb  1 s 0 @1248 ]
+"164
+[v _WR `VXb  1 s 0 @1249 ]
+"165
+[v _WREN `Xb  1 s 0 @1250 ]
+"166
+[v _WRERR `VXb  1 s 0 @1251 ]
+"170
+[v _ANS0 `Xb  1 s 0 @1272 ]
+"171
+[v _ANS1 `Xb  1 s 0 @1273 ]
+"172
+[v _ANS2 `Xb  1 s 0 @1274 ]
+"173
+[v _ANS3 `Xb  1 s 0 @1275 ]
+"174
+[v _ADCS0 `Xb  1 s 0 @1276 ]
+"175
+[v _ADCS1 `Xb  1 s 0 @1277 ]
+"176
+[v _ADCS2 `Xb  1 s 0 @1278 ]
+"18 C:\MPLAB_Projects\carbheat\ServoPulse.c
+[v _main `(v  1 e 0 0 ]
+{
+[v _i `i  1 a 2 0 ]
+"61
+} 2

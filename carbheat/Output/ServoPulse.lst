@@ -1,0 +1,263 @@
+
+
+HI-TECH Software PICC Macro Assembler V9.60PL1
+                                                      Wed May 14 18:47:41 2008
+
+
+     1                           	processor	12F675
+     2                           	opt	pw 79
+     3                           	psect	text0,local,class=CODE,delta=2
+     4                           	psect	text1,local,class=CODE,delta=2
+     5                           	psect	temp,global,ovrld,class=BANK0,space=1,de
+      +                          lta=1
+     6  0000                     
+     7  0000                     
+     8  0000                     
+     9  0000                     
+    10  0000                     
+    11  0000                     
+    12  0000                     
+    13  0000                     
+    14  0000                     
+    15  0000                     
+    16                           
+    17                           	psect	text0
+    18  000B                     _main
+    19                           ;	_i assigned to ?a_main+0
+    20  0000                     _main$i	set	?a_main
+    21                           ;ServoPulse.c: 16: void
+    22  000B  301A               	movlw	26
+    23  000C  1683               	bsf	3,5
+    24  000D  0085               	movwf	5
+    25                           ;ServoPulse.c: 22: WPU = 0x00;
+    26  000E  0195               	clrf	21
+    27                           ;ServoPulse.c: 23: ANSEL = 0x00;
+    28  000F  019F               	clrf	31
+    29                           ;ServoPulse.c: 24: VRCON = 0x81;
+    30  0010  3081               	movlw	-127
+    31  0011  0099               	movwf	25	;volatile
+    32                           ;ServoPulse.c: 25: WPU = 0xff;
+    33  0012  30FF               	movlw	-1
+    34  0013  0095               	movwf	21
+    35                           ;ServoPulse.c: 26: GPPU = 0;
+    36  0014  1381               	bcf	1,7
+    37                           ;ServoPulse.c: 28: CMCON = 0x03;
+    38  0015  3003               	movlw	3
+    39  0016  1283               	bcf	3,5
+    40  0017  0099               	movwf	25	;volatile
+    41  0018                     l3
+    42                           ;ServoPulse.c: 30: while (1)
+    43                           ;ServoPulse.c: 31: {
+    44  0018  1285               	bcf	5,5
+    45                           ;ServoPulse.c: 35: for ( i = 1 ; i <1500; i++ )
+      +                           ;
+    46  0019  01A0               	clrf	?a_main
+    47  001A  0AA0               	incf	?a_main
+    48  001B  01A1               	clrf	?a_main+1
+    49  001C                     l5
+    50  001C  0AA0               	incf	?a_main
+    51  001D  1903               	btfsc	3,2
+    52  001E  0AA1               	incf	?a_main+1
+    53  001F  0821               	movf	?a_main+1,w
+    54  0020  3A80               	xorlw	128
+    55  0021  00DF               	movwf	btemp
+    56  0022  3085               	movlw	133
+    57  0023  025F               	subwf	btemp,w
+    58  0024  30DC               	movlw	220
+    59                           ;set	bank bits for (((?a_main+0)))
+    60  0025  1903               	btfsc	3,2
+    61  0026  0220               	subwf	?a_main,w
+    62  0027  1C03               	btfss	3,0
+    63  0028  281C               	goto	l5
+    64                           ;ServoPulse.c: 37: if (GPIO4 && ! ( CMCON & 0x4
+      +                          0 && GPIO3 == 0) )
+    65  0029  1E05               	btfss	5,4
+    66  002A  2834               	goto	l8
+    67  002B  1F19               	btfss	25,6	;volatile
+    68  002C  282F               	goto	u60
+    69  002D  1D85               	btfss	5,3
+    70  002E  2834               	goto	l8
+    71  002F                     u60
+    72                           ;ServoPulse.c: 38: {
+    73  002F  304B               	movlw	75
+    74  0030  00A0               	movwf	?a_main
+    75  0031  01A1               	clrf	?a_main+1
+    76                           ;ServoPulse.c: 40: GPIO0 = 0;
+    77  0032  1005               	bcf	5,0
+    78  0033  283C               	goto	l10
+    79                           ;ServoPulse.c: 41: VRCON = 0x81;
+    80                           ;ServoPulse.c: 42: }
+    81  0034                     l8
+    82                           ;ServoPulse.c: 43: else
+    83  0034  30B4               	movlw	180
+    84  0035  00A0               	movwf	?a_main
+    85  0036  01A1               	clrf	?a_main+1
+    86                           ;ServoPulse.c: 46: GPIO0=1;
+    87  0037  1405               	bsf	5,0
+    88                           ;ServoPulse.c: 48: if (GPIO3 == 0 )
+    89  0038  1985               	btfsc	5,3
+    90  0039  283C               	goto	l10
+    91                           ;ServoPulse.c: 49: VRCON = 0x82;
+    92  003A  3082               	movlw	-126
+    93  003B  283D               	goto	L2
+    94  003C                     l10
+    95                           ;ServoPulse.c: 50: else
+    96  003C  3081               	movlw	-127
+    97  003D                     L2
+    98  003D  1683               	bsf	3,5
+    99  003E  0099               	movwf	25	;volatile
+   100                           ;ServoPulse.c: 53: }
+   101  003F  1283               	bcf	3,5
+   102  0040  1685               	bsf	5,5
+   103                           ;ServoPulse.c: 58: while (i--) ;
+   104  0041                     l12
+   105  0041  0820               	movf	?a_main,w
+   106  0042  1903               	btfsc	3,2
+   107  0043  03A1               	decf	?a_main+1
+   108  0044  03A0               	decf	?a_main
+   109  0045  0A20               	incf	?a_main,w
+   110  0046  1903               	btfsc	3,2
+   111  0047  0A21               	incf	?a_main+1,w
+   112  0048  1903               	btfsc	3,2
+   113  0049  2818               	goto	l3
+   114  004A  2841               	goto	l12
+   115                           
+   116                           	psect	text1
+   117  0000                     
+   118  0000                     
+   119  0000                     
+   120  0000                     
+   121  0000                     
+   122  0000                     
+   123  0000                     
+   124  0000                     
+   125  0000                     
+   126  0000                     
+   127  0000                     
+   128  0000                     
+   129  0000                     
+   130  0000                     
+   131  0000                     
+   132  0000                     
+   133  0000                     
+   134  0000                     
+   135  0000                     
+   136  0000                     
+   137  0000                     
+   138  0000                     
+   139  0000                     
+   140  0000                     
+   141  0000                     
+   142  0000                     
+   143  0000                     
+   144  0000                     
+   145  0000                     
+   146  0000                     
+   147  0000                     
+   148  0000                     
+   149  0000                     
+   150  0000                     
+   151  0000                     
+   152  0000                     
+   153  0000                     
+   154  0000                     
+   155  0000                     
+   156  0000                     
+   157  0000                     
+   158  0000                     
+   159  0000                     
+   160  0000                     
+   161  0000                     
+   162  0000                     
+   163  0000                     
+   164  0000                     
+   165  0000                     
+   166  0000                     
+   167  0000                     
+   168  0000                     
+   169  0000                     
+   170  0000                     
+   171  0000                     
+   172  0000                     
+   173  0000                     
+   174  0000                     
+   175  0000                     
+   176  0000                     
+   177  0000                     
+   178  0000                     
+   179  0000                     
+   180  0000                     
+   181  0000                     
+   182  0000                     
+   183  0000                     
+   184  0000                     
+   185  0000                     
+   186  0000                     
+   187  0000                     
+   188  0000                     
+   189  0000                     
+   190  0000                     
+   191  0000                     
+   192  0000                     
+   193  0000                     
+   194  0000                     
+   195  0000                     
+   196  0000                     
+   197  0000                     
+   198  0000                     
+   199  0000                     
+   200  0000                     
+   201  0000                     
+   202  0000                     
+   203  0000                     
+   204  0000                     
+   205  0000                     
+   206  0000                     
+   207  0000                     
+   208  0000                     
+   209  0000                     
+   210  0000                     
+   211  0000                     
+   212  0000                     
+   213  0000                     
+   214  0000                     
+   215  0000                     
+   216  0000                     
+   217  0000                     
+   218  0000                     
+   219  0000                     
+   220  0000                     
+   221  0000                     
+   222  0000                     
+   223  0000                     
+   224  0000                     
+   225  0000                     
+   226  0000                     
+   227  0000                     
+   228  0000                     
+   229  0000                     
+   230  0000                     
+   231  0000                     
+   232  0000                     
+   233  0000                     
+   234  0000                     
+   235  0000                     
+   236  0000                     
+   237  0000                     
+   238  0000                     
+   239  0000                     
+   240  0000                     
+   241  0000                     
+   242                           
+   243                           	psect	temp
+   244  005F                     btemp
+                     btemp
+   245  005F                     	ds	1
+
+
+HI-TECH Software PICC Macro Assembler V9.60PL1
+Symbol Table                                          Wed May 14 18:47:41 2008
+
+    ?a_main 0020           l3 0018           l5 001C           l8 0034  
+        l10 003C          l12 0041          u60 002F        _main 000B  
+      btemp 005F        start 0004       status 0003  used_btemp0 0001  
