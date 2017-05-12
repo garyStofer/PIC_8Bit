@@ -1,0 +1,39 @@
+requirements and specs for servo controller 
+
+Cockpit display/control:
+	Provides UI, PID and direct servo control functions. 
+1.) fits in 2 1/14 instrument hole
+2.) has a LCD display, monochrome
+3.) capacitive touch sensor for buttons.
+4.) allows manual override and setpoint adjust
+5.) voltage regulator for 5V 
+	MCU runs on 5V
+6.) don't use VSS/VDD for ADC ref
+7.) controls multiple servos from multiple temp sensors 
+8.) Switch mode PS? Enough current for multiple servos.
+9.) LM 334 based temp sensor, current loop.
+
+Wiring for servo pulse based system for each node: 
+	Ground, , plus 5V, Servo Pulse, Temp current. A max of 4 nodes per DB15 if sharing of VCC or GND pins 
+	Controller needs to subregulate 5V for all servos 
+  
+
+Wiring for LIN-bus  based system:
+	+12V Battery, LIN, GND
+	
+Controller in cockpit
+	Is LIN master node, 
+	provides +12V, LIN,GND through Firewall.
+	Provides PID and UI functions only
+	
+
+Slave  Node:
+		One per Servo/temp probe.
+		Reads temp probe(s) and sends data to Master
+		Has a built in reference for the ADC, or uses i2c/TMP100 probe for Temp
+		Makes servo pulse from LIN data from master
+		Provides subregulated 5V for Servo
+		MCU runs on 5V
+
+
+
