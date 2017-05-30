@@ -1,0 +1,4 @@
+This is a MPLAB V8.85 project. Use old MPLAB and and load .mcw or mcp file. 
+This project was modified from Servo Pulse project which had a PID loop and temp sensor inputs to move servos.  
+The unecessary files and functions have not been removed.
+
